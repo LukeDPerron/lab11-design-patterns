@@ -7,6 +7,14 @@ from presidio_anonymizer.operators import Operator, OperatorType
 class Initial(Operator):
 
     def operate(self, text: str = None, params: Dict = None) -> str:
+        if(text[0].isalnum() == False):
+            word = ""
+            for k in range (0, len(text), 1):
+                word += text[k]
+                if(text[k].isalnum()):
+                    word = word.upper() + "."
+                    return word
+                
         text = text.strip().split()
         if len(text) > 2:
             return text[0][0] + ". " + text[1][0] + ". " + text[2][0] + "."
