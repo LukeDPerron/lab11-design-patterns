@@ -10,7 +10,8 @@ class Initial(Operator):
         text = text.strip().split()
         if len(text) > 2:
             return text[0][0] + ". " + text[1][0] + ". " + text[2][0] + "."
-        return text[0][0] + ". " + text[1][0] + "."
+        elif (len(text) == 1):
+            return text[0][0] + ". " + text[1][0] + "."
 
     def validate(self, params: Dict = None) -> None:
         pass
