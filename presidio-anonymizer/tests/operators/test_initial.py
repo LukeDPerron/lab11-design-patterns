@@ -1,3 +1,4 @@
+import pytest
 
 from presidio_anonymizer.operators import Initial
 
