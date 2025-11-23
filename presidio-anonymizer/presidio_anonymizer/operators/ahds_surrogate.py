@@ -1,6 +1,6 @@
 """AHDS surrogate operator that uses AHDS de-identification service."""
 
-import logging`
+import logging
 import os
 from typing import Dict, List
 
