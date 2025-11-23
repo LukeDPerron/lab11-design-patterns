@@ -8,6 +8,8 @@ def test_correct_name():
 @pytest.mark.parametrize(
     "input_text, initials",
     [
+        ("     Eastern    Michigan   University ","E. M. U."),
+        ("John Smith", "J. S."),
         ("@abc", "@A."),
         ("@843A", "@8."),
         ("--**abc", "--**A.")
